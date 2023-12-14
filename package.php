@@ -16,7 +16,7 @@
             ?>
               <div class="col-md-3 py-3 ">
                 <div class="card text-center ">
-                    <img class="card-img-top" src="img/<?php echo $row['image']; ?>">
+                    <img class="card-img-top" src="<?php echo $row['image']; ?>">
                     <div class="card-body">
                       <h5 class="card-title"><?php echo $row['title']; ?></h5>
                       <p class="card-text"><?php echo $row['subtitle']; ?></p>
