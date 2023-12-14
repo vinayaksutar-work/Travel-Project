@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
         header("Location: booking.php");
     }
     else{
-        die("Some problem is there" . mysqli_connect_error());
+        die("Try again.." . mysqli_connect_error());
     }
 }
 ?>

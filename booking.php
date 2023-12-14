@@ -1,98 +1,87 @@
 <?php
 session_start(); 
  ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking</title>
-    <?php include 'head.php' ?>
-</head>
-<body>
-    <div class="container-fluid">
-        <div class="row">
-            <?php include 'header.php' ?>
-            <div class="row px-md-5 px-3 my-5">
-                <h1 class="text-uppercase text-center ">Book Your Trip!</h1>
-                <form action="form.php" method="post">
-                
-                <?php
-                if(isset($_SESSION['status']))
-                {
-                    ?>
-                    <div class="alert alert-success alert-dismissible fade show px-3 mx-5" role="alert">
-                        <strong>Hey!</strong> <?php echo $_SESSION['status']; ?>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <?php
-                    session_unset();
-                    session_destroy();
-                }
+<?php include 'header.php'; ?>
+<div class="container-fluid">
+    <div class="row">
+        <div class="row px-md-5 px-3 my-5">
+            <h1 class="text-uppercase text-center ">Book Your Trip!</h1>
+            <form action="form.php" method="post">
+            
+            <?php
+            if(isset($_SESSION['status']))
+            {
                 ?>
-                
-                    <div class="row px-lg-5">
-                        <div class="col-md-6 py-2 ">
-                            <label for="">Name</label>
-                            <input type="text" class="form-control" name="name" placeholder="Enter Your Name" required>
-                        </div>
-                        <div class="col-md-6 py-2 ">
-                            <label for="">Email</label>
-                            <input type="email" class="form-control" name="email" placeholder="Enter Your Email" required>
-                        </div>
+                <div class="alert alert-success alert-dismissible fade show px-3 mx-5" role="alert">
+                    <strong>Hey!</strong> <?php echo $_SESSION['status']; ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <?php
+                session_unset();
+                session_destroy();
+            }
+            ?>
+            
+                <div class="row px-lg-5">
+                    <div class="col-md-6 py-2 ">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control" name="name" placeholder="Enter Your Name" required>
                     </div>
-                    <div class="row px-lg-5 ">
-                        <div class="col-md-6 py-2">
-                        <label for="">Contact Number</label>
-                        <input type="contact" class="form-control" name="phone" placeholder="Enter Your Contact Number" required>
-                        </div>
-                        <div class="col-md-6 py-2 ">
-                            <label for="">Address</label>
-                            <input type="text" class="form-control" name="address" placeholder="Enter Your Address" required>
-                        </div>
+                    <div class="col-md-6 py-2 ">
+                        <label for="">Email</label>
+                        <input type="email" class="form-control" name="email" placeholder="Enter Your Email" required>
                     </div>
-                    <div class="row px-lg-5">
-                        <div class="col-md-6 py-2">
-                            <label for="">Where To</label>
-                            <select class="form-control" name="location" required>
-                                <option value="">--Choose Your Destination--</option>
-                                <option value="Amsterdam">Amsterdam</option>
-                                <option value="Cape Town">Cape Town</option>
-                                <option value="London">London</option>
-                                <option value="Los Angeles">Los Angeles</option>
-                                <option value="Maldives">Maldives</option>
-                                <option value="Morocco">Morocco</option>
-                                <option value="Moscow">Moscow</option>
-                                <option value="New York">New York</option>
-                                <option value="Paris">Paris</option>
-                                <option value="Rome">Rome</option>
-                                <option value="Singapore">Singapore</option>
-                                <option value="Tokyo">Tokyo</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6 py-2 ">
-                            <label for="">How Many</label>
-                            <input type="number" class="form-control" name="guests" placeholder="Number Of Guests" required>
-                        </div>
+                </div>
+                <div class="row px-lg-5 ">
+                    <div class="col-md-6 py-2">
+                    <label for="">Contact Number</label>
+                    <input type="contact" class="form-control" name="phone" placeholder="Enter Your Contact Number" required>
                     </div>
-                    <div class="row px-lg-5 ">
-                        <div class="col-md-6 py-2 ">
-                            <label for="">Arrival</label>
-                            <input type="date" name="arrival" class="form-control" required>
-                        </div>
-                        <div class="col-md-6 py-2 ">
-                            <label for="">Leaving</label>
-                            <input type="date" name="leaving" class="form-control" required>
-                        </div>
+                    <div class="col-md-6 py-2 ">
+                        <label for="">Address</label>
+                        <input type="text" class="form-control" name="address" placeholder="Enter Your Address" required>
                     </div>
-                    <div class="row px-lg-5 py-4">
-                        <input type="submit" value="Submit" name="submit" class="btn btn-success ">
+                </div>
+                <div class="row px-lg-5">
+                    <div class="col-md-6 py-2">
+                        <label for="">Where To</label>
+                        <select class="form-control" name="location" required>
+                            <option value="">--Choose Your Destination--</option>
+                            <option value="Amsterdam">Amsterdam</option>
+                            <option value="Cape Town">Cape Town</option>
+                            <option value="London">London</option>
+                            <option value="Los Angeles">Los Angeles</option>
+                            <option value="Maldives">Maldives</option>
+                            <option value="Morocco">Morocco</option>
+                            <option value="Moscow">Moscow</option>
+                            <option value="New York">New York</option>
+                            <option value="Paris">Paris</option>
+                            <option value="Rome">Rome</option>
+                            <option value="Singapore">Singapore</option>
+                            <option value="Tokyo">Tokyo</option>
+                        </select>
                     </div>
-                </form>
-            </div>
-        </div>  
-    </div>
-</body>
-</html>
+                    <div class="col-md-6 py-2 ">
+                        <label for="">How Many</label>
+                        <input type="number" class="form-control" name="guests" placeholder="Number Of Guests" required>
+                    </div>
+                </div>
+                <div class="row px-lg-5 ">
+                    <div class="col-md-6 py-2 ">
+                        <label for="">Arrival</label>
+                        <input type="date" name="arrival" class="form-control" required>
+                    </div>
+                    <div class="col-md-6 py-2 ">
+                        <label for="">Leaving</label>
+                        <input type="date" name="leaving" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row px-lg-5 py-4">
+                    <input type="submit" value="Submit" name="submit" class="btn btn-success ">
+                </div>
+            </form>
+        </div>
+    </div>  
+</div>
