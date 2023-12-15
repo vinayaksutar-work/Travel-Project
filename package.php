@@ -9,7 +9,7 @@
         <div class="row col-md-12 py-5 bg-body-secondary">
             <h1 class="text-uppercase text-center mb-3 ">Top Destinations</h1>
             <?php
-              $sql = "SELECT * FROM cards";
+              $sql = "SELECT * FROM package";
               $result = mysqli_query($conn, $sql);
               while ($row = mysqli_fetch_array($result)) 
               {
@@ -26,7 +26,6 @@
               </div>
             <?php
               }
-              mysqli_close($conn);
             ?>
         </div>
         </div>

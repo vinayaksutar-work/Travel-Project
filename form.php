@@ -4,8 +4,8 @@ session_start();
 
 include 'connection.php';
 
-if(isset($_POST['submit'])){
-
+if(isset($_POST['submit']))
+{
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
     $arrival = $_POST['arrival'];
     $leaving = $_POST['leaving'];
 
-    $sql = "insert into trip(name,email,phone,address,location,guests,arrival,leaving) 
+    $sql = "insert into booking(name,email,phone,address,location,guests,arrival,leaving) 
     values('$name','$email','$phone','$address','$location','$guests','$arrival','$leaving')";
 
     $result = mysqli_query($conn,$sql);

@@ -1,4 +1,4 @@
-<?php require 'connection.php'; ?>
+<?php include 'connection.php'; ?>
 <?php include 'header.php' ?>
 <div class="container-fluid">
     <div class="row">
@@ -17,9 +17,9 @@
         <div class="row col-md-12 justify-content-center py-5 my-5 bg-body-secondary">
             <h1 class="text-uppercase text-center mb-3 ">Our Packages</h1>
             <?php
-              $sql = "SELECT * FROM cards ORDER BY id LIMIT 3";
+              $sql = "SELECT * FROM package ORDER BY id LIMIT 3";
               $result = mysqli_query($conn, $sql);
-              while ($row = mysqli_fetch_array($result)) 
+              while ($row = mysqli_fetch_array($result))
               {
             ?>
               <div class="col-md-3 py-3 ">
@@ -34,7 +34,6 @@
               </div>
             <?php
               }
-              mysqli_close($conn);
             ?>
             <div class="d-flex pt-3 justify-content-center">
                 <a href="package.php" class="btn btn-dark ">Load More</a>
