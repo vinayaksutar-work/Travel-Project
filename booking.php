@@ -1,6 +1,7 @@
-<?php
-session_start(); 
- ?>
+<?php 
+session_start();
+include 'connection.php'; 
+?>
 <?php include 'header.php'; ?>
 <div class="container-fluid">
     <div class="row">
@@ -22,8 +23,7 @@ session_start();
                 session_unset();
                 session_destroy();
             }
-            ?>
-            
+            ?>    
                 <div class="row px-lg-5">
                     <div class="col-md-6 py-2 ">
                         <label for="">Name</label>
@@ -49,18 +49,16 @@ session_start();
                         <label for="">Where To</label>
                         <select class="form-control" name="location" required>
                             <option value="">--Choose Your Destination--</option>
-                            <option value="Amsterdam">Amsterdam</option>
-                            <option value="Cape Town">Cape Town</option>
-                            <option value="London">London</option>
-                            <option value="Los Angeles">Los Angeles</option>
-                            <option value="Maldives">Maldives</option>
-                            <option value="Morocco">Morocco</option>
-                            <option value="Moscow">Moscow</option>
-                            <option value="New York">New York</option>
-                            <option value="Paris">Paris</option>
-                            <option value="Rome">Rome</option>
-                            <option value="Singapore">Singapore</option>
-                            <option value="Tokyo">Tokyo</option>
+                            <?php
+                                $sql = "SELECT * FROM destination";
+                                $result = mysqli_query($conn,$sql);
+                                while ($row = mysqli_fetch_array($result))
+                                { 
+                            ?>
+                            <option value="<?php echo $row['location']; ?>"><?php echo $row['location']; ?></option>
+                            <?php
+                                }
+                            ?>
                         </select>
                     </div>
                     <div class="col-md-6 py-2 ">

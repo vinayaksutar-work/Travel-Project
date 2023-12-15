@@ -1,10 +1,7 @@
 <?php include 'connection.php' ?>
 <footer class="bg-dark text-center">
-  <!-- Grid container -->
   <div class="container px-5 pt-5 ">
-    <!--Grid row-->
     <div class="row">
-      <!--Grid column-->
       <div class="col-lg-4 col-md-6">
         <h5 class="text-uppercase text-warning">Quick Links</h5>
 
@@ -23,9 +20,8 @@
           ?>
         </ul>
       </div>
-      <!--Grid column-->
+      
 
-      <!--Grid column-->
       <div class="col-lg-4 col-md-6">
         <h5 class="text-uppercase text-warning">Contact Info</h5>
         <?php
@@ -52,9 +48,8 @@
           }
          ?>
       </div>
-      <!--Grid column-->
+     
 
-      <!--Grid column-->
       <div class="col-lg-4 col-md-6">
         <h5 class="text-uppercase text-warning">Social Links</h5>
         <ul class="list-unstyled">
@@ -73,17 +68,14 @@
            ?>
         </ul>
       </div>
-      <!--Grid column-->
     </div>
-    <!--Grid row-->
   </div>
-  <!-- Grid container -->
+  
 
-  <!-- Copyright -->
   <div class="text-center text-white p-3 ">
     © Created by : Vinayak Sutar
   </div>
-  <!-- Copyright -->
+  
 </footer>
 </body>
 </html>
