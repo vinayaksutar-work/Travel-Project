@@ -1,12 +1,15 @@
-<?php include 'connection.php'; ?>
-<?php include 'header.php' ?>
+<?php
+$title = 'Home'; 
+include 'connection.php';
+include 'header.php'
+?>
 <div class="container-fluid">
   <div class="row">
     <?php include 'carousel.php' ?>
     <?php include 'services.php' ?>
     <div class="row col-md-12 bg-body-secondary p-5">
       <div class="col-md-6 py-4">
-        <img src="img/about.jpg" alt="" class="img-fluid p-lg-3">
+        <img src="assets/images/about.jpg" alt="" class="img-fluid p-lg-3">
       </div>
       <div class="col-md-6 align-self-md-center">
         <h2>About Us</h2>

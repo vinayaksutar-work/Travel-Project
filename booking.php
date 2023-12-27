@@ -1,8 +1,9 @@
 <?php 
 session_start();
-include 'connection.php'; 
+$title = 'Booking';
+include 'connection.php';
+include 'header.php'; 
 ?>
-<?php include 'header.php'; ?>
 <div class="container-fluid">
     <div class="row">
         <div class="row px-md-5 px-3 my-5">

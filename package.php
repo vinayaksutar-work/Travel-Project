@@ -1,9 +1,12 @@
-<?php require 'connection.php'; ?>
-<?php include 'header.php' ?>
+<?php
+$title = 'Packages'; 
+include 'connection.php';
+include 'header.php';
+?>
 <div class="container-fluid">
   <div class="row">
     <div class="banner">
-        <img src="img/packages-banner.jpg" alt="">
+        <img src="assets/images/packages-banner.jpg" alt="">
         <div class="centered"><h1 class="text-uppercase text-white">Packages</h1></div>
     </div>
     <div class="row col-md-12 py-5 bg-body-secondary">

@@ -6,13 +6,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active" data-interval="2000">
-      <img class="d-block w-100" src="img/bg-1.jpg" alt="First slide">
+      <img class="d-block w-100" src="assets/images/bg-1.jpg" alt="First slide">
     </div>
     <div class="carousel-item" data-interval="2000">
-      <img class="d-block w-100" src="img/bg-2.jpg" alt="Second slide">
+      <img class="d-block w-100" src="assets/images/bg-2.jpg" alt="Second slide">
     </div>
     <div class="carousel-item" data-interval="2000">
-      <img class="d-block w-100" src="img/bg-3.jpg" alt="Third slide">
+      <img class="d-block w-100" src="assets/images/bg-3.jpg" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

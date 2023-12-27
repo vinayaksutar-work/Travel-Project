@@ -1,14 +1,17 @@
-<?php include 'connection.php'; ?>
-<?php include 'header.php'; ?>
+<?php
+$title = 'About'; 
+include 'connection.php';
+include 'header.php'; 
+?>
 <div class="container-fluid" id="about">
     <div class="row">
         <div class="banner">
-            <img src="img/about-banner.jpg" alt="">
+            <img src="assets/images/about-banner.jpg" alt="">
             <div class="centered"><h1 class="text-uppercase text-white">About Us</h1></div>
         </div>
         <div class="row col-md-12 my-5 py-5  bg-body-secondary">
             <div class="col-xl-6">
-                <img src="img/about-us.jpg" alt="" class="img-fluid p-5 ">
+                <img src="assets/images/about-us.jpg" alt="" class="img-fluid p-5 ">
             </div>
             <div class="col-xl-6 text-center align-self-md-center pb-5 pb-xl-0">
                 <h2>Why Choose Us?</h2>
