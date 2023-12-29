@@ -1,7 +1,8 @@
 <?php
 $title = 'Home'; 
 include 'connection.php';
-include 'header.php'
+include 'header.php';
+include 'navbar.php';
 ?>
 <div class="container-fluid">
   <div class="row">
