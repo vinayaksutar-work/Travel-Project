@@ -12,8 +12,8 @@
                 while($row = mysqli_fetch_array($result))
                 { 
              ?>
-                <li class="nav-item active px-2 ">
-                    <a class="nav-link" href="<?php echo $row['link']; ?>"><?php echo $row['name']; ?></a>
+                <li class="nav-item px-2 ">
+                    <a class="nav-link <?php if($title == $row['name']){ echo 'active';}?>" href="<?php echo $row['link']; ?>"><?php echo $row['name']; ?></a>
                 </li>
             <?php
                 }
